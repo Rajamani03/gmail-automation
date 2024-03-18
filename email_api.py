@@ -9,11 +9,9 @@ from email.mime.text import MIMEText
 from email_model import EmailData
    
 class EmailAPI:
-
+    # If modifying these scopes, delete the file token.json.
+    SCOPES = ["https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/gmail.modify"]
     def __init__(self):
-        # If modifying these scopes, delete the file token.json.
-        self.SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
-
         self.creds = None
 
         # The file token.json stores the user's access and refresh tokens, and is
